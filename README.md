@@ -47,8 +47,8 @@ Example of a style variation file:
 ```json
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
   "title": "My Custom Style",
-  "version": 2,
   "settings": {
     "color": {
       "palette": [
