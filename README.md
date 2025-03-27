@@ -31,6 +31,57 @@ The theme includes a custom color palette defined in the `theme.json` file. You 
 - Modifying the color palette in the `theme.json` file
 - Adding custom CSS to the `style.css` file
 - Creating custom block patterns in the patterns directory
+- Adding style variations to the `styles` directory (see below)
+- Including custom fonts in the `assets/fonts` directory (see below)
+
+### Adding Style Variations
+
+To create custom style variations:
+
+1. Navigate to the `styles` directory in your child theme
+2. Create a new JSON file (e.g., `my-custom-style.json`)
+3. Define your variation settings following the WordPress style variation format
+4. Your new style variation will appear in the WordPress Site Editor under "Styles"
+
+Example of a style variation file:
+```json
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "My Custom Style",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "primary",
+          "color": "#yourCustomColor",
+          "name": "Primary"
+        }
+        // Add more colors as needed
+      ]
+    }
+  }
+}
+```
+
+### Adding Custom Fonts
+
+To add custom fonts to your theme:
+
+1. Place your font files (woff, woff2, etc.) in the `assets/fonts` directory
+2. Add the @font-face declarations to your `style.css` file
+3. Update your `theme.json` to include the new font family
+
+Example @font-face declaration for style.css:
+```css
+@font-face {
+  font-family: 'Your Custom Font';
+  src: url('./assets/fonts/your-custom-font.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+```
 
 ## Support
 
