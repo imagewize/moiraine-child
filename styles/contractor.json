@@ -1,0 +1,66 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "title": "Contractor & Renovation",
+    "settings": {
+      "color": {
+        "palette": [
+          {
+            "name": "Brand",
+            "slug": "primary",
+            "color": "#2E4C8A"
+          },
+          {
+            "name": "Brand Accent",
+            "slug": "primary-accent",
+            "color": "#E9EDF6"
+          },
+          {
+            "name": "Brand Alt",
+            "slug": "primary-alt",
+            "color": "#F7C04A"
+          },
+          {
+            "name": "Brand Alt Accent",
+            "slug": "primary-alt-accent",
+            "color": "#1F3460"
+          },
+          {
+            "name": "Contrast",
+            "slug": "main",
+            "color": "#2B2D33"
+          },
+          {
+            "name": "Contrast Accent",
+            "slug": "main-accent",
+            "color": "#E0E1E4"
+          },
+          {
+            "name": "Base",
+            "slug": "base",
+            "color": "#fff"
+          },
+          {
+            "name": "Base Accent",
+            "slug": "secondary",
+            "color": "#5D606A"
+          },
+          {
+            "name": "Tint",
+            "slug": "tertiary",
+            "color": "#F8F9FA"
+          },
+          {
+            "name": "Border Base",
+            "slug": "border-light",
+            "color": "#D5D6DB"
+          },
+          {
+            "name": "Border Contrast",
+            "slug": "border-dark",
+            "color": "#464952"
+          }
+        ]
+      }
+    }
+  }

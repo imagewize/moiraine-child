@@ -1,0 +1,66 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "title": "Law Firm & Legal",
+    "settings": {
+      "color": {
+        "palette": [
+          {
+            "name": "Brand",
+            "slug": "primary",
+            "color": "#1A3A6C"
+          },
+          {
+            "name": "Brand Accent",
+            "slug": "primary-accent",
+            "color": "#E6EBF4"
+          },
+          {
+            "name": "Brand Alt",
+            "slug": "primary-alt",
+            "color": "#9D2235"
+          },
+          {
+            "name": "Brand Alt Accent",
+            "slug": "primary-alt-accent",
+            "color": "#142C52"
+          },
+          {
+            "name": "Contrast",
+            "slug": "main",
+            "color": "#222831"
+          },
+          {
+            "name": "Contrast Accent",
+            "slug": "main-accent",
+            "color": "#DCE0E5"
+          },
+          {
+            "name": "Base",
+            "slug": "base",
+            "color": "#fff"
+          },
+          {
+            "name": "Base Accent",
+            "slug": "secondary",
+            "color": "#5A6478"
+          },
+          {
+            "name": "Tint",
+            "slug": "tertiary",
+            "color": "#F7F8FA"
+          },
+          {
+            "name": "Border Base",
+            "slug": "border-light",
+            "color": "#D4D8E0"
+          },
+          {
+            "name": "Border Contrast",
+            "slug": "border-dark",
+            "color": "#3F4654"
+          }
+        ]
+      }
+    }
+  }
