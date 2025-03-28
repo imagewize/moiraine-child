@@ -3,7 +3,7 @@
 add_action( 'wp_enqueue_scripts', 'moiraine_child_enqueue_styles' );
 
 /**
- * Enqueue Ollie styles.
+ * Enqueue Moiraine Child styles.
  *
  * @return void
  */
