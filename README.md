@@ -34,6 +34,38 @@ The theme includes a custom color palette defined in the `theme.json` file. You 
 - Adding style variations to the `styles` directory (see below)
 - Including custom fonts in the `assets/fonts` directory (see below)
 
+### Adding Custom Patterns to Parent Theme Categories
+
+When creating custom block patterns, you can register them to appear within the parent Moiraine theme's existing pattern categories. This allows your custom patterns to be organized alongside the parent theme patterns for a unified editing experience.
+
+To register your patterns with parent theme categories:
+
+1. Create your pattern files in the `patterns` directory of your child theme
+2. In your child theme's functions.php, hook into the pattern registration process
+3. Use the same category slugs that the parent theme uses to add your patterns to those categories
+
+Example code for functions.php:
+```php
+function moiraine_child_register_pattern_categories() {
+    // Register existing parent theme categories again in the child theme
+    // This ensures your patterns can be added to these categories
+    register_block_pattern_category(
+        'moiraine/features',
+        array('label' => __('Features', 'moiraine-child'))
+    );
+    
+    register_block_pattern_category(
+        'moiraine/pages',
+        array('label' => __('Pages', 'moiraine-child'))
+    );
+    
+    // Add more parent categories as needed
+}
+add_action('init', 'moiraine_child_register_pattern_categories', 5);
+```
+
+By using the same category slugs as the parent theme, your custom patterns will appear in the same categories in the pattern inserter, creating a seamless experience for site editors.
+
 ### Adding Style Variations
 
 To create custom style variations:
