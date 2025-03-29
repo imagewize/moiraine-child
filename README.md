@@ -33,6 +33,7 @@ The theme includes a custom color palette defined in the `theme.json` file. You 
 - Creating custom block patterns in the patterns directory
 - Adding style variations to the `styles` directory (see below)
 - Including custom fonts in the `assets/fonts` directory (see below)
+- Overriding parent theme template parts in the `parts` directory (see below)
 
 ### Adding Custom Patterns to Parent Theme Categories
 
@@ -114,6 +115,19 @@ Example @font-face declaration for style.css:
   font-display: swap;
 }
 ```
+
+### Customizing Template Parts
+
+The theme includes a `parts` directory with a `.gitkeep` file, allowing you to customize theme parts such as headers, footers, and sidebars:
+
+1. Create template part files in the `parts` directory (e.g., `parts/header.html`)
+2. These files will override the corresponding template parts from the parent theme
+3. Common parts to customize include:
+   - `parts/header.html` - Override the site header
+   - `parts/footer.html` - Customize the site footer 
+   - `parts/sidebar.html` - Create a custom sidebar
+
+This structure makes it easy to maintain a child theme with custom layouts while still benefiting from parent theme updates.
 
 ## Support
 
