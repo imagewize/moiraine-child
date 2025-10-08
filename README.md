@@ -1,16 +1,55 @@
 # Moiraine Child Theme
 
-A child theme for the [Moiraine WordPress theme](https://github.com/imagewize/moiraine), providing customized styling and color palettes while maintaining the functionality of the parent theme.
+A blank child theme template for the [Moiraine WordPress theme](https://github.com/imagewize/moiraine). This serves as a starting point for creating custom child themes while maintaining all the functionality of the parent theme.
 
 ## Description
 
-Moiraine Child theme extends the Moiraine theme with custom colors and styles. It's designed to give you a solid foundation for creating a unique website while leveraging all the features of the parent Moiraine theme.
+Moiraine Child is a minimal child theme template that inherits all features from the parent Moiraine theme. By default, it uses the parent theme's complete design system (colors, typography, spacing, shadows, gradients, and duotone filters). You can selectively override any aspect to create your own branded child theme.
+
+## How theme.json Inheritance Works
+
+WordPress automatically **merges** the child theme's `theme.json` with the parent theme's `theme.json`. This means:
+
+- **By default**: The child theme inherits everything from the parent (colors, typography, spacing, etc.)
+- **Add overrides only when needed**: The child `theme.json` starts empty - add settings only for what you want to customize
+- **Automatic updates**: When the parent theme updates its design system, child themes automatically benefit
+
+### Example: Adding Custom Colors
+
+To override the parent's color palette, edit `theme.json`:
+
+```json
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Brand",
+          "slug": "primary",
+          "color": "#yourBrandColor"
+        },
+        {
+          "name": "Brand Accent",
+          "slug": "primary-accent",
+          "color": "#yourAccentColor"
+        }
+        // Add more custom colors as needed
+      ]
+    }
+  }
+}
+```
+
+You can override any part of the parent's theme.json - colors, typography, spacing, or even add new settings. Anything not specified in the child will be inherited from the parent.
 
 ## Features
 
-- Custom color palette optimized for brand consistency
-- Maintains all functionality from the parent Moiraine theme
-- Clean, minimal design with focus on content
+- Blank template ready for customization
+- Inherits complete parent theme design system
+- Minimal codebase - easy to understand and maintain
+- Follows WordPress child theme best practices
 
 ## Requirements
 
@@ -26,14 +65,16 @@ Moiraine Child theme extends the Moiraine theme with custom colors and styles. I
 
 ## Customization
 
-The theme includes a custom color palette defined in the `theme.json` file. You can further customize the theme by:
+This child theme template provides multiple ways to customize your site:
 
-- Modifying the color palette in the `theme.json` file
-- Adding custom CSS to the `style.css` file
-- Creating custom block patterns in the patterns directory
-- Adding style variations to the `styles` directory (see below)
-- Including custom fonts in the `assets/fonts` directory (see below)
-- Overriding parent theme template parts in the `parts` directory (see below)
+- **Add custom colors** to the `theme.json` file (overrides parent palette)
+- **Add custom CSS** to the `style.css` file for additional styling
+- **Create custom block patterns** in the `patterns/` directory
+- **Add style variations** in the `styles/` directory
+- **Include custom fonts** in the `assets/fonts/` directory
+- **Override template parts** in the `parts/` directory (headers, footers, etc.)
+
+All customizations are optional - the theme works out of the box with parent settings.
 
 ### Adding Custom Patterns to Parent Theme Categories
 
