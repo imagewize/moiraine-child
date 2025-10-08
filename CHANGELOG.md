@@ -5,6 +5,19 @@ All notable changes to the Moiraine Child theme will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2025-10-08
+
+### Changed
+- **theme.json**: Complete parent theme.json copy for standalone functionality
+  - Copied entire parent theme configuration to ensure child theme works independently
+  - Includes full color palette (11 colors), typography settings, spacing system, shadows, gradients, and duotone presets
+  - Default style now displays properly with background colors and complete design system
+  - Users can now customize any aspect while starting from a fully functional base
+
+### Fixed
+- Default style variation no longer displays as blank/white - now includes proper background colors and text styling
+- Child theme now functions correctly even when parent theme details aren't immediately available
+
 ## [1.1.0] - 2025-10-08
 
 ### Changed
