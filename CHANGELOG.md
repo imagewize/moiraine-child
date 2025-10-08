@@ -8,17 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2025-10-08
 
 ### Changed
-- **theme.json**: Synchronized color palette with parent theme v2.3.0
-  - Updated `primary-accent` from `#DDDAFB` to `#e9e7ff`
-  - Updated `primary-alt-accent` from `#575094` to `#3d386b`
-  - Updated `secondary` (Base Accent) from `#5F5F82` to `#545473`
+- **theme.json**: Converted to blank child theme template
+  - Removed all color palette overrides - now uses parent theme colors by default
+  - Empty palette array allows this to serve as a starting point for new child themes
+  - Simplified to minimal child theme approach for maximum flexibility
+  - All features (colors, typography, spacing, shadows, gradients, duotone) inherited from parent
 
 ### Added
-- **theme.json**: Added parent theme features for better compatibility
-  - Added `appearanceTools: true` for enhanced editor tools
-  - Added 5 duotone presets (Primary, Secondary, Accent, Neutral, High Contrast)
-  - Added 6 gradient presets (Purple, Blue, Royal Blue, Pink, Black, Heat)
-  - Added `link: true` for color link support
 - **style.css**: Updated theme metadata
   - Added `Tested up to: 6.7.1`
   - Added `Requires PHP: 7.3`

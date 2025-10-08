@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **WordPress child theme** for the Moiraine parent theme. It extends the parent theme with custom colors and styles while maintaining all parent functionality. The child theme follows WordPress block theme standards (theme.json, FSE).
+This is a **blank WordPress child theme template** for the Moiraine parent theme. It serves as a starting point for creating custom child themes. By default, it inherits ALL features from the parent theme. The child theme follows WordPress block theme standards (theme.json, FSE).
 
 **Parent Theme Location**: `~/code/moiraine` (local development setup)
 
@@ -16,32 +16,43 @@ This is a **WordPress child theme** for the Moiraine parent theme. It extends th
 - Parent theme dependency is declared in `composer.json` as `"imagewize/moiraine": "*"`
 - Template override: `style.css` header declares `Template: moiraine`
 
-### theme.json Strategy
-The child theme's `theme.json` is **minimal** - it only includes color palette overrides. It does NOT duplicate the parent theme's complete configuration (typography, spacing, shadows, etc.). WordPress automatically merges child theme.json with parent theme.json.
+### theme.json Strategy - BLANK TEMPLATE APPROACH
+The child theme's `theme.json` is **completely minimal** - it starts with an empty palette array. WordPress automatically merges child theme.json with parent theme.json, so the child inherits everything by default.
 
 **Current child theme.json includes**:
 - Version 3 schema
-- Custom color palette (11 colors with specific brand colors)
+- Empty color palette array `"palette": []`
+- This is intentional - it's a blank template for creating new child themes
 
-**Parent theme.json includes** (NOT duplicated in child):
+**How to customize**:
+- Add color overrides to `theme.json` only when needed
+- Add typography overrides only if changing fonts
+- Add spacing/layout overrides only if customizing those aspects
+
+**Parent theme.json provides** (automatically inherited):
+- Complete color palette (11 colors)
 - Typography settings (font families, font sizes, fluid typography)
 - Spacing system (7 responsive spacing sizes)
 - Shadow presets (8 shadow variations)
 - Layout settings (contentSize, wideSize)
 - Custom properties (fontWeight, lineHeight)
 - Block styles and element styles
-- Duotone and gradient presets
+- Duotone presets (5 filters)
+- Gradient presets (6 gradients)
 
 ### File Structure
 ```
 moiraine-child/
-├── theme.json           # Minimal - only color overrides
+├── theme.json           # Blank template - empty palette array
 ├── style.css            # Child theme header + any custom CSS
 ├── functions.php        # Only stylesheet enqueuing
 ├── patterns/            # Custom block patterns (empty, ready for use)
 ├── styles/              # Style variations (empty, ready for use)
 ├── parts/               # Template part overrides (empty, ready for use)
-└── assets/fonts/        # Custom fonts (if needed)
+├── assets/fonts/        # Custom fonts (if needed)
+├── CHANGELOG.md         # Version history
+├── CLAUDE.md            # This file
+└── README.md            # User documentation
 ```
 
 ## Development Commands
@@ -65,11 +76,29 @@ composer wpcs:fix
 
 ## Customization Workflows
 
-### Updating Colors
-When parent theme colors change, update child `theme.json`:
-1. Check parent theme's color palette in `~/code/moiraine/theme.json`
-2. Update only the colors you want to override in child `theme.json`
+### Adding Custom Colors (Starting from Blank Template)
+To add brand-specific colors to this blank child theme:
+1. Check parent theme's color palette in `~/code/moiraine/theme.json` to see available color slugs
+2. Add only the colors you want to override to child `theme.json`:
+```json
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Brand",
+          "slug": "primary",
+          "color": "#yourBrandColor"
+        }
+      ]
+    }
+  }
+}
+```
 3. Keep the same color slugs for consistency (e.g., "primary", "main", "base")
+4. Colors not overridden will use parent theme defaults
 
 ### Adding Custom Patterns
 1. Create pattern files in `patterns/` directory
