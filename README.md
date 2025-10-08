@@ -1,18 +1,19 @@
 # Moiraine Child Theme
 
-A blank child theme template for the [Moiraine WordPress theme](https://github.com/imagewize/moiraine). This serves as a starting point for creating custom child themes while maintaining all the functionality of the parent theme.
+A complete child theme template for the [Moiraine WordPress theme](https://github.com/imagewize/moiraine). This serves as a fully functional starting point for creating custom child themes with all parent theme features included.
 
 ## Description
 
-Moiraine Child is a minimal child theme template that inherits all features from the parent Moiraine theme. By default, it uses the parent theme's complete design system (colors, typography, spacing, shadows, gradients, and duotone filters). You can selectively override any aspect to create your own branded child theme.
+Moiraine Child is a complete child theme template that includes the full parent Moiraine theme configuration. It comes with a complete design system (colors, typography, spacing, shadows, gradients, and duotone filters) ready to use out of the box. You can selectively modify any aspect to create your own branded child theme.
 
-## How theme.json Inheritance Works
+## How theme.json Works in This Child Theme
 
-WordPress automatically **merges** the child theme's `theme.json` with the parent theme's `theme.json`. This means:
+The child theme's `theme.json` includes a **complete copy** of the parent theme's configuration. This approach provides:
 
-- **By default**: The child theme inherits everything from the parent (colors, typography, spacing, etc.)
-- **Add overrides only when needed**: The child `theme.json` starts empty - add settings only for what you want to customize
-- **Automatic updates**: When the parent theme updates its design system, child themes automatically benefit
+- **Standalone functionality**: Works immediately with full styling - no blank pages
+- **Easy customization**: Modify any setting directly in the child theme.json
+- **Clear starting point**: All design tokens visible and ready to customize
+- **Version control**: Track exactly what settings your child theme uses
 
 ### Example: Adding Custom Colors
 
@@ -46,9 +47,10 @@ You can override any part of the parent's theme.json - colors, typography, spaci
 
 ## Features
 
-- Blank template ready for customization
-- Inherits complete parent theme design system
-- Minimal codebase - easy to understand and maintain
+- Complete theme.json with full parent design system included
+- Works standalone with proper styling from the start
+- All 11 brand colors, typography settings, spacing system, shadows, gradients, and duotone presets
+- Easy to customize - all settings visible in child theme
 - Follows WordPress child theme best practices
 
 ## Requirements
@@ -67,14 +69,16 @@ You can override any part of the parent's theme.json - colors, typography, spaci
 
 This child theme template provides multiple ways to customize your site:
 
-- **Add custom colors** to the `theme.json` file (overrides parent palette)
+- **Modify colors** in the `theme.json` file (complete palette included)
+- **Adjust typography** settings - fonts, sizes, weights already defined
+- **Customize spacing** - responsive spacing system included
 - **Add custom CSS** to the `style.css` file for additional styling
 - **Create custom block patterns** in the `patterns/` directory
 - **Add style variations** in the `styles/` directory
 - **Include custom fonts** in the `assets/fonts/` directory
 - **Override template parts** in the `parts/` directory (headers, footers, etc.)
 
-All customizations are optional - the theme works out of the box with parent settings.
+The theme works immediately with full styling - customize as needed.
 
 ### Adding Custom Patterns to Parent Theme Categories
 
